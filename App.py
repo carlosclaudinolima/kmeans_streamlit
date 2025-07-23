@@ -36,6 +36,7 @@ if up_file is not None:
              """)
     df = pd.read_csv(up_file)
     cluster = processar_prever(df)
+    # Inserir a informação de cluster no DataFrame
     df.insert(0, 'grupos', cluster)
 
     st.write('Visualização dos resultados (10 primeiros registros):')
